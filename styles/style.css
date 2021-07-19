@@ -48,8 +48,6 @@ button:disabled {
 }
 
 .head_box {
-  border:2px solid orange;
-  background:olivedrab;
   position: relative;
   width: 600px;
   height: 600px;
@@ -59,11 +57,35 @@ button:disabled {
   position: absolute;
 }
 
+/* robot animation CSS */
+@keyframes robo-talk {
+  10%  {transform: translateY(30px) translateX(-10px) rotate(3deg);}
+  20%  {transform: translateY(-25px) translateX(5px) rotate(-1deg);}
+  30%  {transform: translateY(35px) translateX(3px) rotate(-7deg);}
+  40%  {transform: translateY(-45px) translateX(-5px) rotate(4deg);}
+  50%  {transform: translateY(30px) translateX(10px) rotate(-3deg);}
+  60%  {transform: translateY(-15px) translateX(2px) rotate(6deg);}
+  70%  {transform: translateY(25px) translateX(-6px) rotate(3deg);}
+  80%  {transform: translateY(-30px) translateX(-2px) rotate(-2deg);}
+  90%  {transform: translateY(25px) translateX(5px) rotate(-3deg);}
+  100%  {transform: translateY(-30px) translateX(-2px) rotate(1deg);}
+}
+
+.head_box .jaw {
+  transform-origin: center;
+  transition: all 1s ease-out;
+}
+
+button:disabled ~ .head_box .jaw {
+  /* transform: translateY(30px); */
+  animation: robo-talk 10s infinite;
+}
+
+
 /* Media Query: Tablet or Smaller */
 @media screen and (max-width: 100px) {
   .container {
     background-position: center center;
-    background-size: cover;
   }
 }
 
