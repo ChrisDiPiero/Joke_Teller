@@ -16,9 +16,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url('../images/robot.gif');
   background-size: contain;
-  background-position: left center;
   background-repeat: no-repeat;
 }
 
@@ -47,6 +45,18 @@ button:active {
 button:disabled {
   cursor: default;
   filter: brightness(30%);
+}
+
+.head_box {
+  border:2px solid orange;
+  background:olivedrab;
+  position: relative;
+  width: 600px;
+  height: 600px;
+}
+
+.head_box img {
+  position: absolute;
 }
 
 /* Media Query: Tablet or Smaller */
