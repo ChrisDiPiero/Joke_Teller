@@ -59,7 +59,7 @@ button:disabled {
 
 /* robot animation CSS */
 @keyframes robo-talk {
-  0%   {transform: 0;}
+  0%   {transform: translate(0, 0);}
   10%  {transform: translateY(30px) translateX(-10px) rotate(3deg);}
   20%  {transform: translateY(-25px) translateX(5px) rotate(-1deg);}
   30%  {transform: translateY(35px) translateX(3px) rotate(-7deg);}
@@ -74,12 +74,12 @@ button:disabled {
 
 .head_box .jaw {
   transform-origin: center;
-  transition: all 1s ease-out;
+  /* transition: all 1s ease-out; */
 }
 
 button:disabled ~ .head_box .jaw {
   /* transform: translateY(30px); */
-  animation: robo-talk 10s infinite;
+  animation: robo-talk 3s linear alternate infinite;
 }
 
 
